@@ -12,7 +12,7 @@
 	<artifactId>proyecto</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>proyecto</name>
-	<description>Platilla proyecto para el curso Sistemas Transaccionales</description>
+	<description>Platilla proyecto</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
