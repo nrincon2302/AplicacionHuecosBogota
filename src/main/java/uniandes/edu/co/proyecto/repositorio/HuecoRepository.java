@@ -26,7 +26,7 @@ public interface HuecoRepository extends JpaRepository<Hueco, Long> {
 
     @Modifying
     @Transactional
-    @Query(value = "INSERT INTO huecos (volumen, estado, ubicacion) VALUES (:volumen, :estado, :ubicacion)", nativeQuery = true)
+    @Query(value = "INSERT INTO huecos (id, volumen, estado, ubicacion) VALUES (hueco_sequence.nextval, :volumen, :estado, :ubicacion)", nativeQuery = true)
     void agregarHueco(@Param("volumen") Float volumen, @Param("estado") String estado, @Param("ubicacion") Long ubicacion);
 
     @Modifying

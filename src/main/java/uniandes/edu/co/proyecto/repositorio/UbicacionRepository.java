@@ -26,7 +26,7 @@ public interface UbicacionRepository extends JpaRepository<Ubicacion, Long> {
 
     @Modifying
     @Transactional
-    @Query(value = "INSERT INTO ubicaciones (direccion, ciudad) VALUES (:direccion, :ciudad)", nativeQuery = true)
+    @Query(value = "INSERT INTO ubicaciones (id, direccion, ciudad) VALUES (ubicacion_sequence.nextval, :direccion, :ciudad)", nativeQuery = true)
     void agregarUbicacion(@Param("direccion") String direccion, @Param("ciudad") String ciudad);
 
     @Modifying

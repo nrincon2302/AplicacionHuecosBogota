@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Ubicaciones</title>
+        <link rel="stylesheet" type="text/css" th:href="@{/css/bootstrap.min.css}" />
+        <script th:src="@{/css/jquery.min.js}"></script>
+        <script th:src="@{/css/bootstrap.min.js}"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar navbar-light bg-light">
+                <a class="navbar-brand" th:href="@{/}">
+                <img th:src="@{/images/home.png}" width="30" height="30" class="d-inline-block align-top" alt="">
+                    HOME
+                </a>
+            </nav>
+        </nav>
+
+        <main>
+            </br>
+            <form th:action="@{/ubicaciones/new/save}" method="post">
+                <div th:replace="~{fragments/ubicacionForm :: ubicacionForm(titulo='Registrar dirección')}">
+                </div>
+            </form>
+        </main>   
+    </body>
+
+    <!-- Footer -->
+    <footer style="background-color: #D8D8D8; position: relative; bottom: 100; width: 100%; height: 100px;">
+
+        <div style="padding: 30px">
+            <div style="float: left; width: 400px;" >© Taller de Electrónica, 2023-20</div>
+            <div style="float: right; width: 220px;" >Universidad de los Andes</div>
+        </div>
+        <br>
+
+    </footer>
+    <!-- Footer -->
+</html>
