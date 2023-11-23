@@ -32,7 +32,7 @@ public class UbicacionController {
     @PostMapping("/ubicaciones/new/save")
     public String ubicacionGuardar(@ModelAttribute Ubicacion ubicacion) {
         ubicacionRepository.agregarUbicacion(ubicacion.getDireccion(), ubicacion.getCiudad());
-        return "redirect:/ubicaciones";
+        return "redirect:/huecos";
     }
 
     @GetMapping("/ubicaciones/{id}/edit")

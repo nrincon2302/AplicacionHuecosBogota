@@ -12,7 +12,7 @@ import uniandes.edu.co.proyecto.modelo.Ubicacion;
 
 public interface UbicacionRepository extends JpaRepository<Ubicacion, Long> {
 
-    @Query(value = "SELECT * FROM ubicaciones", nativeQuery = true)
+    @Query(value = "SELECT UNIQUE * FROM ubicaciones", nativeQuery = true)
     Collection<Ubicacion> darUbicaciones();
 
     @Query(value = "SELECT * FROM ubicaciones WHERE id = :id", nativeQuery = true)

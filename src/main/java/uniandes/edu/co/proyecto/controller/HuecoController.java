@@ -44,6 +44,7 @@ public class HuecoController {
         Hueco hueco = huecoRepository.darHuecoPorId(id);
         if (hueco != null) {
             model.addAttribute("hueco", hueco);
+            model.addAttribute("ubicaciones", ubicacionRepository.darUbicaciones());
             return "huecosEditar";
         } else {
             return "redirect:/huecos";

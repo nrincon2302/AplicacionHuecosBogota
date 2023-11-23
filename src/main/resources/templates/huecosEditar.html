@@ -19,7 +19,7 @@
         <main>
             </br>
             <form th:action="@{'/huecos/' + ${id} + '/edit/save'}" th:object="${hueco}" method="post">
-                <div th:replace="~{fragments/huecoForm :: huecoForm(titulo='Cambiar Estado del Hueco', hueco=${hueco})}">
+                <div th:replace="~{fragments/huecoForm :: huecoForm(titulo='Cambiar Estado del Hueco', hueco=${hueco}, ubicacion=${ubicaciones})}">
                 </div>
             </form>
         </main>   

@@ -24,16 +24,16 @@
             <option value="LEVE" th:selected="${hueco.estado eq 'LEVE'}">LEVE</option>
             <option value="INTERVENIDO" th:selected="${hueco.estado eq 'INTERVENIDO'}">INTERVENIDO</option>
             <option value="REPARADO" th:selected="${hueco.estado eq 'REPARADO'}">REPARADO</option>
-        </select><br>
+        </select>
 
-        <label class="col-form-label" for="ubicacion">Ubicación:</label>
+        <label class="col-form-label" for="ubicaciones">Ubicación:</label>
         <select class="form-control" id="ubicacion" name="ubicacion" required>
             <th:block th:each="ubicacion : ${ubicaciones}" >
                 <option th:value="${ubicacion.id}" th:text="${ubicacion.direccion}" th:selected="${hueco!=null || hueco.ubicacion.id == ubicacion.id}"></option>
             </th:block>
         </select><br>
         <a th:href='@{/ubicaciones/new}' class="btn btn-secondary">Registrar dirección que no está en la lista</a>
-       
+       <br>
         <div class="text-center">
             <input type="submit" value="Guardar" class="btn btn-primary">
             <a th:href="@{/huecos}" class="btn btn-primary">Cancelar</a>
